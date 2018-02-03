@@ -1,0 +1,37 @@
+<navbar></navbar>
+<div class="row center-xs contacts">
+    <div ui-view class="col-sm-6">
+        <p class="title">
+            Contacts
+            <a ui-sref="contacts.new" class="btn btn-success">New Contact</a>
+        </p>
+        <p>
+            <input type="text" class="form-control" ng-model="$ctrl.query" placeholder="Search">
+        </p>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Phone</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="contact in $ctrl.contacts | filter:$ctrl.query">
+                    <td>{{ contact.name }}</td>
+                    <td>{{ contact.surname }}</td>
+                    <td>{{ contact.phone }}</td>
+                    <td>
+                        <a ui-sref="contacts.edit({ contactId: contact._id })" class="btn btn-primary">
+                            Edit
+                        </a>
+                        <button class="btn btn-danger" ng-click="$ctrl.removeContact(contact._id)">
+                            Remove
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

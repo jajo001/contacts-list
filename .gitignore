@@ -1,0 +1,14 @@
+.tmp
+.git
+.DS_Store
+.settings
+*.log
+node_modules
+coverage
+.idea/
+.yarn-cache
+.vscode
+config/.production
+config/.testing
+config/.development
+/public

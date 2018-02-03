@@ -1,0 +1,19 @@
+@import 'node_modules/flexboxgrid/css/flexboxgrid';
+@import "common/common";
+.app {
+    height: 100%;
+    font-size: 16px;
+    .alert {
+        text-align: center;
+    }
+    .form-group {
+        text-align: left;
+    }
+    .title {
+        font-size: 32px;
+        margin-bottom: 30px;
+    }
+    .small {
+        font-size: 15px;
+    }
+}
