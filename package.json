@@ -3,7 +3,7 @@
     "version": "0.0.0",
     "private": true,
     "scripts": {
-        "dev": "node_modules/parallelshell/index.js \"nodemon ./bin/www\"  \"gulp serve\"",
+        "dev": "node .node_modules/parallelshell/index.js \"nodemon ./bin/www\"  \"gulp serve\"",
         "build": "gulp webpack",
         "component": "gulp component",
         "serve": "gulp serve",
